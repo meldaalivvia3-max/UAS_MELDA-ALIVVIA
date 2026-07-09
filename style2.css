@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Alata",sans-serif;
+    background-color: #FFF4B8;
+    color: #5b4636;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Chelsea Market", cursive;
+    color: #7a3b53;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+section:not(#home, #bukutamu) {
+    padding: 120px 0;
+    border-bottom: none;
+}
+
+section h2 {
+    font-family: "Chelsea Market", cursive;
+    color: #7a3b53;
+    font-size: 1.7rem;
+    margin-bottom: 60px;
+    text-align: left;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #5b4636;
+    display: inline-block;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 3rem;
+    background: #FFF4B8;
+    border-bottom: 2px solid #5b4636;
+}
+
+header h1 {
+    font-family: "Alata", cursive;
+    font-size: 1.1rem;
+    color: #7a3b53;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7a3b53;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.55;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+#home {
+    text-align: left;
+    background: #FFF4B8;
+    padding: 160px 20px 100px;
+    border-radius: 0;
+    border-bottom: 2px solid #5b4636;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#home h2 {
+    font-size: 3.4rem;
+    margin-bottom: 28px;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+#home p {
+    max-width: 560px;
+    margin: 0 0 16px;
+    font-size: 1rem;
+    color: #5b4636;
+}
+
+#home a {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 16px 0;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    color: #5b4636;
+    border: 2px solid #5b4636;
+    border-radius: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.25s ease;
+    box-shadow: none;
+}
+
+#home a:hover {
+    background: #5b4636;
+    color: #FFF4B8;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 0;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    color: #5b4636;
+    background: transparent;
+    border: 2px solid #5b4636;
+    border-radius: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: none;
+    background: #5b4636;
+    color: #FFF4B8;
+}
+
+#about {
+    padding: 120px 0;
+    max-width: 1100px;
+    margin: auto;
+}
+
+#about p {
+    max-width: 720px;
+    margin: 0 0 24px;
+    text-align: left;
+    text-indent: 0;
+    font-size: 1.02rem;
+}
+
+#profile {
+    padding: 120px 0;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.profile-container {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 28px;
+}
+
+.profile-photo {
+    margin-bottom: 0;
+    display: inline-block;
+    padding: 28px;
+    background-image:
+        linear-gradient(rgba(91, 70, 54, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(91, 70, 54, 0.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+    background-position: center;
+}
+
+#profile img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0;
+    border: 2px solid #5b4636;
+    box-shadow: none;
+    display: block;
+}
+
+#profile h3 {
+    color: #7a3b53;
+    margin: 0 0 4px;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+#profile p {
+    text-align: center;
+    text-indent: 0;
+    max-width: 420px;
+    margin: 0 auto 15px;
+}
+
+#Galery ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    padding: 0;
+    background: #5b4636;
+    border: 2px solid #5b4636;
+}
+
+#Galery ul li {
+    list-style: none;
+}
+
+.foto-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    background: #FFF4B8;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: none;
+}
+
+.foto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 24px rgba(91, 70, 54, 0.18);
+}
+
+.foto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: filter 0.4s ease, transform 0.4s ease;
+    filter: grayscale(40%);
+}
+
+.foto-card:hover img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
+}
+
+.caption1 {
+    position: static;
+    display: inline-block;
+    background: transparent;
+    color: #7a3b53;
+    padding: 0;
+    border-radius: 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.foto-card figcaption {
+    font-family: "Alata", sans-serif;
+    padding: 20px 22px 26px;
+    border-top: 1px solid rgba(91, 70, 54, 0.15);
+}
+
+.foto-card h4 {
+    font-family: "Chelsea Market", cursive;
+    color: #7a3b53;
+    margin-bottom: 6px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#video-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2px;
+    background: #5b4636;
+    border: 2px solid #5b4636;
+}
+
+#video figure {
+    background: #FFF4B8;
+    padding: 0;
+    border-radius: 0;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: none;
+}
+
+#video figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 24px rgba(91, 70, 54, 0.18);
+}
+
+#video-grid video {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    transition: filter 0.4s ease;
+    filter: grayscale(30%);
+}
+
+#video figure:hover video {
+    filter: grayscale(0%);
+}
+
+#video figcaption {
+    padding: 18px 20px 24px;
+    border-top: 1px solid rgba(91, 70, 54, 0.15);
+}
+
+#video figcaption h3 {
+    font-family: "Chelsea Market", cursive;
+    text-align: left;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#bukutamu {
+    background: #5b4636;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px;
+    border-bottom: none;
+}
+
+#bukutamu h2 {
+    color: #FFF4B8;
+    text-align: left;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #FFF4B8;
+}
+
+.guestbook {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #FFF4B8;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   padding: 14px 0;
+   border: none;
+   border-bottom: 2px solid rgba(255, 244, 184, 0.4);
+   border-radius: 0;
+   font-size: 15px;
+   font-family: inherit;
+   outline: none;
+   color: #FFF4B8;
+   background: transparent;
+   transition: border-color 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 244, 184, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FFF4B8;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    width: auto;
+    padding: 16px 40px;
+    border: 2px solid #FFF4B8;
+    border-radius: 0;
+    background: transparent;
+    color: #FFF4B8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: #FFF4B8;
+    color: #5b4636;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 40px;
+    background: #FFF4B8;
+    border-top: 2px solid #5b4636;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #7a3b53;
+    font-size: 0.85rem;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 16px;
+}
+
+footer .socials a {
+    color: #7a3b53;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+}
+
+footer .socials a:hover {
+    opacity: 0.6;
+    transform: translateY(-3px);
+}
+
+footer a {
+    color: #7a3b53;
+    text-decoration: none;
+    margin: 0 12px 0 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+#home, 
+#about,
+#profile,
+#galery,
+#video,
+#bukutamu {
+    animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #home h2 {
+        font-size: 2.4rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    #home {
+        padding: 120px 15px 80px;
+    }
+
+    #home h2 {
+        font-size: 1.9rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+    }
+
+    section:not(#home, #bukutamu) {
+        padding: 80px 20px;
+    }
+
+    #profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #galery ul,
+    #video ul {
+        grid-template-columns: 1fr;
+    }
+
+    .guestbook {
+         padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 0.95rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    #home h2 {
+        font-size: 1.5rem;
+    }
+
+    #profile img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .foto-card img {
+        height: 200px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+}
